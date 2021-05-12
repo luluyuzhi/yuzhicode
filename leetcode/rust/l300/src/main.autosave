@@ -1,0 +1,35 @@
+struct Solution;
+
+impl Solution {
+    pub fn length_of_lis(nums: Vec<i32>) -> i32 {
+        let nums = nums;
+
+        let mut new_nums = nums.clone();
+        new_nums.sort();
+        let new_nums = new_nums;
+
+        let mut plate = vec![];
+
+        for i in 0..nums.len() + 1 {
+            plate.push(vec![]);
+            for _ in 0..nums.len() + 1 {
+                plate[i].push(0);
+            }
+        }
+
+        for i in 1..nums.len() + 1 {
+            for j in 1..nums.len() + 1 {
+                if nums[i - 1] == new_nums[j - 1] {
+                    plate[i][j] = plate[i - 1][j - 1] + 1;
+                } else {
+                    plate[i][j] = plate[i - 1][j].max(plate[i][j - 1]);
+                }
+            }       
+        }
+        return plate[nums.len()][nums.len()];
+    }
+}
+
+fn main() {
+    println!("Hello, world!");
+}
