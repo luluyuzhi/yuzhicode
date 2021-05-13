@@ -13,7 +13,7 @@ impl ListNode {
 }
 
 struct Solution;
-//! 顺序反转
+//*! 顺序反转
 impl Solution {
     pub fn reverse_print(head: Option<Box<ListNode>>) -> Vec<i32> {
         let mut v = vec![];

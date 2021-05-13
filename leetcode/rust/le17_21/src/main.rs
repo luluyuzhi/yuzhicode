@@ -15,13 +15,10 @@ impl Solution {
 
         let over = 0;
 
-        let mut s = vec![];
+        let mut s = vec![1];
         for cur in height.iter() {
             
         }
-
-
-
         1
     }
 }

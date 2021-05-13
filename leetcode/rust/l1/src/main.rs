@@ -1,24 +1,8 @@
 struct Solution;
 
-// 暴力
-impl Solution {
-    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        for (i, &v) in nums.iter().enumerate() {
-            for j in i..nums.len() {
-                if nums[j] == target - v {
-                    vec![i, j]
-                }
-            }
-        }
-        vec![]
-    }
-}
-
-// Hash
-
 impl Solution {
     pub fn two_sum1(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let m = std::collections::HashMap::with_capacity(nums.len());
+        let mut m = std::collections::HashMap::with_capacity(nums.len());
 
         for (cur, &itr) in nums.iter().enumerate() {
             if m.contains_key(&(target - itr)) {
