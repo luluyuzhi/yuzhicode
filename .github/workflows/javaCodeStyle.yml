@@ -25,6 +25,6 @@ jobs:
       uses: nikitasavinov/checkstyle-action@master
       with:
         github_token: ${{ secrets.TOKEN }}
-        reporter: 'github-prAndPusg-check-JavaCode-on-java_dev-Branch'
+#         reporter: 'github-prAndPusg-check-JavaCode-on-java_dev-Branch'
         tool_name: 'reviewdog'
   
