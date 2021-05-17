@@ -95,5 +95,6 @@ public class Solution2 {
 
 
         System.out.println(new Solution2().leafSimilar(root1, root2));
+        System.out.println("#############")
     }
 }
